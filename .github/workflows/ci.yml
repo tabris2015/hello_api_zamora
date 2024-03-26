@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: ['3.10', '3.11']
+        python-version: ['3.11']
 
     steps:
     - uses: actions/checkout@v3
@@ -24,7 +24,6 @@ jobs:
     - name: Install Dependencies
       run: pip install -q -r requirements-dev.txt
     - name: Check Format
-      run: |
-        black . --check
+      run: black . --check
     - name: Run Tests
       run: pytest tests.py
