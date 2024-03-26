@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="Hello API")
+app = FastAPI(title="Hello API from the cloud baby")
 
 
 @app.get("/")
